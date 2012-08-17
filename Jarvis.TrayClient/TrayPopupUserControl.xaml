@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="Jarvis.TrayClient.TrayPopupUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:TrayClient="clr-namespace:Jarvis.TrayClient" mc:Ignorable="d" DataContext="{Binding RelativeSource={RelativeSource Self}}"
+             >
+  <UserControl.Resources>
+        <TrayClient:NegatingConverter x:Key="negatingConverter"></TrayClient:NegatingConverter>
+    </UserControl.Resources>
+  <Border Padding="10">
+    <Border Padding="4" Background="White" BorderThickness="1" BorderBrush="#FF898989" CornerRadius="2">
+        
+            <Border.Effect>
+                <DropShadowEffect Color="Black" ShadowDepth="3" />
+            </Border.Effect>
+        
+        <StackPanel Width="200">
+
+            <Border x:Name="ServiceLabelBorder" Margin="4" BorderBrush="{Binding Path=LabelBorderBrush}" BorderThickness="2" Background="{Binding Path=LabelBrush}">
+                <Label x:Name="ServiceLabel" Content="Service Stopped" HorizontalAlignment="Center" TextElement.Foreground="White"></Label>
+            </Border>
+                <Button Margin="4" IsEnabled="{Binding Path=ServiceIsRunning,  Converter={StaticResource negatingConverter}}" Content="Start Service" Click="StartButtonClick"></Button>
+                <Button Margin="4"  IsEnabled="{Binding Path=ServiceIsRunning}" Content="Stop Service" Click="StopButtonClick"></Button>
+            <Button Margin="4" Content="Close Tray Manager" Click="CloseButtonClick"></Button>
+        </StackPanel>
+    </Border>
+    </Border>
+</UserControl>
