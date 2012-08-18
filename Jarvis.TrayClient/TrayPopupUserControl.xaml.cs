@@ -84,14 +84,12 @@ namespace Jarvis.TrayClient
             LabelBrush = new SolidColorBrush(Colors.Red);
             LabelBorderBrush = new SolidColorBrush(Colors.Red);
             ServiceLabel.Content = "Jarvis Service is not installed";
-
+            _serviceController = ServiceController.GetServices().FirstOrDefault(service => service.ServiceName.Contains("JarvisService"));
         }
 
         void UpdateServiceStatus(object sender, EventArgs args)
         {
-            _serviceController =
-                ServiceController.GetServices().FirstOrDefault(service => service.ServiceName.Contains("Jarvis"));
-
+            _serviceController.Refresh();
             if (_serviceController == null)
             {
                 ServiceLabel.Content = "Jarvis Service is not installed";
@@ -128,7 +126,7 @@ namespace Jarvis.TrayClient
                 }
                 catch (InvalidOperationException ex)
                 {
-                    ServiceLabel.Content = "Error";
+                    ServiceLabel.Content = ex.Message;
                     LabelBrush = new SolidColorBrush(Colors.Red);
                     LabelBorderBrush = new SolidColorBrush(Colors.DarkRed);
                 }
@@ -137,6 +135,12 @@ namespace Jarvis.TrayClient
 
         private void CloseButtonClick(object sender, RoutedEventArgs e)
         {
+
+            CleanShutdown();
+        }
+
+        private void CleanShutdown()
+        {
             if (_serviceController != null)
             {
                 _serviceController.Close();
@@ -144,7 +148,10 @@ namespace Jarvis.TrayClient
 
             _timer.Stop();
 
-            Application.Current.Shutdown();
+            foreach (Window window in Application.Current.Windows)
+            {
+                window.Close();
+            }
         }
 
         private void StopButtonClick(object sender, RoutedEventArgs e)
@@ -157,7 +164,7 @@ namespace Jarvis.TrayClient
                 }
                 catch (InvalidOperationException ex)
                 {
-                    ServiceLabel.Content = "Error";
+                    ServiceLabel.Content = ex.Message;
                     LabelBrush = new SolidColorBrush(Colors.Red);
                     LabelBorderBrush = new SolidColorBrush(Colors.DarkRed);
                 }
@@ -173,7 +180,7 @@ namespace Jarvis.TrayClient
             string propertyName = null;
             MemberExpression memberExp = property.Body as MemberExpression;
             if (memberExp != null)
-                 propertyName = memberExp.Member.Name;
+                propertyName = memberExp.Member.Name;
 
             // for DateTime
             UnaryExpression unaryExp = property.Body as UnaryExpression;
@@ -181,7 +188,7 @@ namespace Jarvis.TrayClient
             {
                 memberExp = unaryExp.Operand as MemberExpression;
                 if (memberExp != null)
-                    propertyName= memberExp.Member.Name;
+                    propertyName = memberExp.Member.Name;
             }
 
             var eventArgs = new PropertyChangedEventArgs(propertyName);
