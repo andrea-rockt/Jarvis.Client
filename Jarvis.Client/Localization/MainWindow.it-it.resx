@@ -117,10 +117,43 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CopyMenuItem_Header" xml:space="preserve">
+    <value>Copia</value>
+  </data>
+  <data name="CutMenuItem_Header" xml:space="preserve">
+    <value>Taglia</value>
+  </data>
+  <data name="EditMenu_Header" xml:space="preserve">
+    <value>Modifica</value>
+  </data>
+  <data name="ExitMenuItem_Header" xml:space="preserve">
+    <value>Esci</value>
+  </data>
   <data name="FileMenu_Header" xml:space="preserve">
     <value>File</value>
   </data>
   <data name="JarvisMainWindow_Title" xml:space="preserve">
     <value>Jarvis - Il tuo maggiordomo personale</value>
+  </data>
+  <data name="LanguageMenu_Header" xml:space="preserve">
+    <value>Lingua</value>
+  </data>
+  <data name="LocationAddressLabel_Content" xml:space="preserve">
+    <value>Indirizzo:</value>
+  </data>
+  <data name="LocationCityLabel_Content" xml:space="preserve">
+    <value>Città:</value>
+  </data>
+  <data name="LocationNameLabel_Content1" xml:space="preserve">
+    <value>Nome:</value>
+  </data>
+  <data name="LocationsListHeader_Text" xml:space="preserve">
+    <value>Locazioni:</value>
+  </data>
+  <data name="LocationStateLabel_Content" xml:space="preserve">
+    <value>Stato:</value>
+  </data>
+  <data name="PasteMenuItem_Header" xml:space="preserve">
+    <value>Incolla</value>
   </data>
 </root>

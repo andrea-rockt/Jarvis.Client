@@ -61,6 +61,42 @@ namespace Jarvis.Client.Localization {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Copy.
+        /// </summary>
+        public static string CopyMenuItem_Header {
+            get {
+                return ResourceManager.GetString("CopyMenuItem_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Cut.
+        /// </summary>
+        public static string CutMenuItem_Header {
+            get {
+                return ResourceManager.GetString("CutMenuItem_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Edit.
+        /// </summary>
+        public static string EditMenu_Header {
+            get {
+                return ResourceManager.GetString("EditMenu_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Exit.
+        /// </summary>
+        public static string ExitMenuItem_Header {
+            get {
+                return ResourceManager.GetString("ExitMenuItem_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a File.
         /// </summary>
         public static string FileMenu_Header {
@@ -75,6 +111,69 @@ namespace Jarvis.Client.Localization {
         public static string JarvisMainWindow_Title {
             get {
                 return ResourceManager.GetString("JarvisMainWindow_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Language.
+        /// </summary>
+        public static string LanguageMenu_Header {
+            get {
+                return ResourceManager.GetString("LanguageMenu_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Address:.
+        /// </summary>
+        public static string LocationAddressLabel_Content {
+            get {
+                return ResourceManager.GetString("LocationAddressLabel_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a City:.
+        /// </summary>
+        public static string LocationCityLabel_Content {
+            get {
+                return ResourceManager.GetString("LocationCityLabel_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Name:.
+        /// </summary>
+        public static string LocationNameLabel_Content {
+            get {
+                return ResourceManager.GetString("LocationNameLabel_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Locations:.
+        /// </summary>
+        public static string LocationsListHeader_Text {
+            get {
+                return ResourceManager.GetString("LocationsListHeader_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a State:.
+        /// </summary>
+        public static string LocationStateLabel_Content {
+            get {
+                return ResourceManager.GetString("LocationStateLabel_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Paste.
+        /// </summary>
+        public static string PasteMenuItem_Header {
+            get {
+                return ResourceManager.GetString("PasteMenuItem_Header", resourceCulture);
             }
         }
     }

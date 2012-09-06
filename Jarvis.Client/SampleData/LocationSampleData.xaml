@@ -1,0 +1,109 @@
+﻿<Jarvis_WCF_Contracts_Data:Location xmlns:Jarvis_WCF_Contracts_Data="clr-namespace:Jarvis.WCF.Contracts.Data;assembly=Jarvis.WCF.Contracts" xmlns:System="clr-namespace:System;assembly=mscorlib" City="Torino" Name="Locazione1" State="Italia" StreetAddress="4567 Main St., Buffalo, NY 98052">
+	<Jarvis_WCF_Contracts_Data:Location.Actions>
+		<Jarvis_WCF_Contracts_Data:ExecuteProgramAction CommandString="Ciao" ExecuteInDirectory="C:\">
+			<Jarvis_WCF_Contracts_Data:ExecuteProgramAction.Id>
+				<System:Guid/>
+			</Jarvis_WCF_Contracts_Data:ExecuteProgramAction.Id>
+		</Jarvis_WCF_Contracts_Data:ExecuteProgramAction>
+		<Jarvis_WCF_Contracts_Data:Action>
+			<Jarvis_WCF_Contracts_Data:Action.Id>
+				<System:Guid/>
+			</Jarvis_WCF_Contracts_Data:Action.Id>
+		</Jarvis_WCF_Contracts_Data:Action>
+		<Jarvis_WCF_Contracts_Data:Action>
+			<Jarvis_WCF_Contracts_Data:Action.Id>
+				<System:Guid/>
+			</Jarvis_WCF_Contracts_Data:Action.Id>
+		</Jarvis_WCF_Contracts_Data:Action>
+		<Jarvis_WCF_Contracts_Data:Action>
+			<Jarvis_WCF_Contracts_Data:Action.Id>
+				<System:Guid/>
+			</Jarvis_WCF_Contracts_Data:Action.Id>
+		</Jarvis_WCF_Contracts_Data:Action>
+		<Jarvis_WCF_Contracts_Data:Action>
+			<Jarvis_WCF_Contracts_Data:Action.Id>
+				<System:Guid/>
+			</Jarvis_WCF_Contracts_Data:Action.Id>
+		</Jarvis_WCF_Contracts_Data:Action>
+		<Jarvis_WCF_Contracts_Data:Action>
+			<Jarvis_WCF_Contracts_Data:Action.Id>
+				<System:Guid/>
+			</Jarvis_WCF_Contracts_Data:Action.Id>
+		</Jarvis_WCF_Contracts_Data:Action>
+		<Jarvis_WCF_Contracts_Data:Action>
+			<Jarvis_WCF_Contracts_Data:Action.Id>
+				<System:Guid/>
+			</Jarvis_WCF_Contracts_Data:Action.Id>
+		</Jarvis_WCF_Contracts_Data:Action>
+		<Jarvis_WCF_Contracts_Data:Action>
+			<Jarvis_WCF_Contracts_Data:Action.Id>
+				<System:Guid/>
+			</Jarvis_WCF_Contracts_Data:Action.Id>
+		</Jarvis_WCF_Contracts_Data:Action>
+		<Jarvis_WCF_Contracts_Data:Action>
+			<Jarvis_WCF_Contracts_Data:Action.Id>
+				<System:Guid/>
+			</Jarvis_WCF_Contracts_Data:Action.Id>
+		</Jarvis_WCF_Contracts_Data:Action>
+		<Jarvis_WCF_Contracts_Data:Action>
+			<Jarvis_WCF_Contracts_Data:Action.Id>
+				<System:Guid/>
+			</Jarvis_WCF_Contracts_Data:Action.Id>
+		</Jarvis_WCF_Contracts_Data:Action>
+	</Jarvis_WCF_Contracts_Data:Location.Actions>
+	<Jarvis_WCF_Contracts_Data:Location.Categories>
+		<Jarvis_WCF_Contracts_Data:LocationCategory Name="#FF8DD3C7">
+			<Jarvis_WCF_Contracts_Data:LocationCategory.Id>
+				<System:Guid/>
+			</Jarvis_WCF_Contracts_Data:LocationCategory.Id>
+		</Jarvis_WCF_Contracts_Data:LocationCategory>
+		<Jarvis_WCF_Contracts_Data:LocationCategory Name="#FFFFFFB3">
+			<Jarvis_WCF_Contracts_Data:LocationCategory.Id>
+				<System:Guid/>
+			</Jarvis_WCF_Contracts_Data:LocationCategory.Id>
+		</Jarvis_WCF_Contracts_Data:LocationCategory>
+		<Jarvis_WCF_Contracts_Data:LocationCategory Name="#FFBEBADA">
+			<Jarvis_WCF_Contracts_Data:LocationCategory.Id>
+				<System:Guid/>
+			</Jarvis_WCF_Contracts_Data:LocationCategory.Id>
+		</Jarvis_WCF_Contracts_Data:LocationCategory>
+		<Jarvis_WCF_Contracts_Data:LocationCategory Name="#FFFB8072">
+			<Jarvis_WCF_Contracts_Data:LocationCategory.Id>
+				<System:Guid/>
+			</Jarvis_WCF_Contracts_Data:LocationCategory.Id>
+		</Jarvis_WCF_Contracts_Data:LocationCategory>
+		<Jarvis_WCF_Contracts_Data:LocationCategory Name="#FF80B1D3">
+			<Jarvis_WCF_Contracts_Data:LocationCategory.Id>
+				<System:Guid/>
+			</Jarvis_WCF_Contracts_Data:LocationCategory.Id>
+		</Jarvis_WCF_Contracts_Data:LocationCategory>
+		<Jarvis_WCF_Contracts_Data:LocationCategory Name="#FFFDB462">
+			<Jarvis_WCF_Contracts_Data:LocationCategory.Id>
+				<System:Guid/>
+			</Jarvis_WCF_Contracts_Data:LocationCategory.Id>
+		</Jarvis_WCF_Contracts_Data:LocationCategory>
+		<Jarvis_WCF_Contracts_Data:LocationCategory Name="#FFB3DE69">
+			<Jarvis_WCF_Contracts_Data:LocationCategory.Id>
+				<System:Guid/>
+			</Jarvis_WCF_Contracts_Data:LocationCategory.Id>
+		</Jarvis_WCF_Contracts_Data:LocationCategory>
+		<Jarvis_WCF_Contracts_Data:LocationCategory Name="#FFFCCDE5">
+			<Jarvis_WCF_Contracts_Data:LocationCategory.Id>
+				<System:Guid/>
+			</Jarvis_WCF_Contracts_Data:LocationCategory.Id>
+		</Jarvis_WCF_Contracts_Data:LocationCategory>
+		<Jarvis_WCF_Contracts_Data:LocationCategory Name="#FFD9D9D9">
+			<Jarvis_WCF_Contracts_Data:LocationCategory.Id>
+				<System:Guid/>
+			</Jarvis_WCF_Contracts_Data:LocationCategory.Id>
+		</Jarvis_WCF_Contracts_Data:LocationCategory>
+		<Jarvis_WCF_Contracts_Data:LocationCategory Name="#FFBC80BD">
+			<Jarvis_WCF_Contracts_Data:LocationCategory.Id>
+				<System:Guid/>
+			</Jarvis_WCF_Contracts_Data:LocationCategory.Id>
+		</Jarvis_WCF_Contracts_Data:LocationCategory>
+	</Jarvis_WCF_Contracts_Data:Location.Categories>
+	<Jarvis_WCF_Contracts_Data:Location.Id>
+		<System:Guid/>
+	</Jarvis_WCF_Contracts_Data:Location.Id>
+</Jarvis_WCF_Contracts_Data:Location>
