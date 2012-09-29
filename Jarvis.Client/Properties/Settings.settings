@@ -1,7 +1,9 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Jarvis.Client.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="BingMapsKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">AleqgTU-t1Ga7heD0G6iyxyYYUawOgij2mgEDS2O87COaoqNgh_mT925G6Cy8F85</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

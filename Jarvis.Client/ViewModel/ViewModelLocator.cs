@@ -41,6 +41,7 @@ namespace Jarvis.Client.ViewModel
                               {
                                   new LocationServiceModule(),
                                   new ViewModelsModule(ViewModelBase.IsInDesignModeStatic),
+                                  new BingMapsModule(), 
                               };
 
             
@@ -55,6 +56,11 @@ namespace Jarvis.Client.ViewModel
             {
                 return ServiceLocator.Current.GetInstance<MainViewModel>();
             }
+        }
+
+        public LocateMeViewModel LocateMe
+        {
+            get { return ServiceLocator.Current.GetInstance<LocateMeViewModel>(); }
         }
         
         public static void Cleanup()

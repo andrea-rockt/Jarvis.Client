@@ -98,17 +98,25 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Commands\ExitCommand.cs" />
+    <Compile Include="Converters\MyImageSourceConverter.cs" />
     <Compile Include="Converters\SubtractingConverter.cs" />
+    <Compile Include="IoC\BingMapsModule.cs" />
     <Compile Include="IoC\LocationServiceModule.cs" />
     <Compile Include="IoC\ViewModelsModule.cs" />
     <Compile Include="ViewModel\AutoNotifyViewModelBase.cs" />
     <Compile Include="ViewModel\CultureMenuViewModel.cs" />
+    <Compile Include="ViewModel\LocateMeViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
+    <Compile Include="View\LocateMeUC.xaml.cs">
+      <DependentUpon>LocateMeUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ManageLocationsUC.xaml.cs">
+      <DependentUpon>ManageLocationsUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -118,11 +126,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MainWindow.resx</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
     <Page Include="Themes\ExpressionDark.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\LocateMeUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ManageLocationsUC.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -162,10 +178,22 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Icons\chart.png" />
+    <Resource Include="Icons\Globe.png" />
+    <Resource Include="Icons\Pin.png" />
     <Resource Include="MVVMLight.Nuget.Readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <DesignData Include="SampleData\LocationSampleData.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bing.Maps\Bing.Maps.csproj">
+      <Project>{F02BC636-EC1D-44DB-91F4-20C6B6531C77}</Project>
+      <Name>Bing.Maps</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

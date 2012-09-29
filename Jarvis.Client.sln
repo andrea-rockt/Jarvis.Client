@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jarvis.Client.Test", "Jarvi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jarvis.TrayClient", "Jarvis.TrayClient\Jarvis.TrayClient.csproj", "{4A6D05BE-ABC9-443F-97BE-324E7C3E59F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bing.Maps", "Bing.Maps\Bing.Maps.csproj", "{F02BC636-EC1D-44DB-91F4-20C6B6531C77}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,16 @@ Global
 		{4A6D05BE-ABC9-443F-97BE-324E7C3E59F3}.Release|Mixed Platforms.Build.0 = Release|x86
 		{4A6D05BE-ABC9-443F-97BE-324E7C3E59F3}.Release|x86.ActiveCfg = Release|x86
 		{4A6D05BE-ABC9-443F-97BE-324E7C3E59F3}.Release|x86.Build.0 = Release|x86
+		{F02BC636-EC1D-44DB-91F4-20C6B6531C77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F02BC636-EC1D-44DB-91F4-20C6B6531C77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F02BC636-EC1D-44DB-91F4-20C6B6531C77}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F02BC636-EC1D-44DB-91F4-20C6B6531C77}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F02BC636-EC1D-44DB-91F4-20C6B6531C77}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F02BC636-EC1D-44DB-91F4-20C6B6531C77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F02BC636-EC1D-44DB-91F4-20C6B6531C77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F02BC636-EC1D-44DB-91F4-20C6B6531C77}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{F02BC636-EC1D-44DB-91F4-20C6B6531C77}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{F02BC636-EC1D-44DB-91F4-20C6B6531C77}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

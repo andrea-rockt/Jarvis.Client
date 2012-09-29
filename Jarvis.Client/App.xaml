@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Application x:Class="Jarvis.Client.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" StartupUri="MainWindow.xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:vm="clr-namespace:Jarvis.Client.ViewModel"
+<Application x:Class="Jarvis.Client.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:vm="clr-namespace:Jarvis.Client.ViewModel"
              xmlns:Commands="clr-namespace:Jarvis.Client.Commands"
-             xmlns:Converters="clr-namespace:Jarvis.Client.Converters" mc:Ignorable="d">
+             xmlns:Converters="clr-namespace:Jarvis.Client.Converters" mc:Ignorable="d" StartupUri="View/MainWindow.xaml">
   <Application.Resources>
     <ResourceDictionary>
       <ResourceDictionary.MergedDictionaries>
