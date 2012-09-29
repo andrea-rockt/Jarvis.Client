@@ -1,4 +1,4 @@
-<UserControl
+﻿<UserControl
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -16,19 +16,29 @@
 				<ColumnDefinition Width="0.5*"/>
 			</Grid.ColumnDefinitions>
 			<Border Background="{DynamicResource DisabledBackgroundBrush}" Padding="4" >
-				<DockPanel LastChildFill="True" >
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition/>
+						<RowDefinition Height="Auto"/>
+					</Grid.RowDefinitions>
                 
-					<Border Margin="0,2,0,2" Padding="10,3,0,3" Background="{DynamicResource NormalBrush}" BorderBrush="{DynamicResource NormalBorderBrush}" BorderThickness="1" DockPanel.Dock="Top" CornerRadius="2">
+					<Border Margin="0,2,0,0" Padding="10,3,0,3" Background="{DynamicResource NormalBrush}" BorderBrush="{DynamicResource NormalBorderBrush}" BorderThickness="1" CornerRadius="2" VerticalAlignment="Top">
 						<TextBlock x:Name="LocationsListHeader" Foreground="White"  Text="{WPFLocalizeExtension_Extensions:Loc}"/>
 					</Border>
-					<ListBox x:Name="LocationListBox" DockPanel.Dock="Bottom" ItemsSource="{Binding Locations}">
+					<ListBox SelectedItem="{Binding SelectedLocation}" x:Name="LocationListBox" ItemsSource="{Binding Locations}" d:LayoutOverrides="Height" Grid.Row="1" Margin="0,4">
 						<ListBox.ItemTemplate>
 							<DataTemplate>
 								<TextBlock Text="{Binding Name}"/>
 							</DataTemplate>
 						</ListBox.ItemTemplate>
 					</ListBox>
-				</DockPanel>
+					<StackPanel Orientation="Vertical" Grid.Row="2" VerticalAlignment="Bottom">
+						<Button Command="{Binding AddLocation}" Margin="2" Content="Add Location" Height="22" d:LayoutOverrides="Height"/>
+						<Button Command="{Binding RemoveLocation}" Margin="2" Content="Remove Location" Height="22" d:LayoutOverrides="Height"/>
+						<Button Command="{Binding UpdateLocation}"  Margin="2" Content="Update Location" Height="22" d:LayoutOverrides="Height"/>
+					</StackPanel>
+				</Grid>
 			</Border>
 			<GridSplitter Width="1" Background="{DynamicResource ControlBackgroundBrush}"/>
 			<ContentControl Grid.Column="1" d:DataContext="{d:DesignData /SampleData/LocationSampleData.xaml}" Content="{Binding SelectedItem, ElementName=LocationListBox}">

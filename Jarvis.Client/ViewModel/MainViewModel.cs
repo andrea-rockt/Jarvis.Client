@@ -27,13 +27,8 @@ namespace Jarvis.Client.ViewModel
     /// </summary>
     public class MainViewModel : AutoNotifyViewModelBase
     {
-        public IList<Location> Locations {
-            get
-            {
-              return ServiceLocator.Current
-                    .GetInstance<ILocationService>().GetKnownLocations();
-            }
-        }
+
+        
 
         [NotifyOfChanges]
         public virtual CultureInfo CurrentCulture { get; set; }

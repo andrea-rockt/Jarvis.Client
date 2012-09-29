@@ -98,15 +98,16 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Commands\ExitCommand.cs" />
-    <Compile Include="Converters\MyImageSourceConverter.cs" />
     <Compile Include="Converters\SubtractingConverter.cs" />
     <Compile Include="IoC\BingMapsModule.cs" />
     <Compile Include="IoC\LocationServiceModule.cs" />
     <Compile Include="IoC\ViewModelsModule.cs" />
     <Compile Include="ViewModel\AutoNotifyViewModelBase.cs" />
     <Compile Include="ViewModel\CultureMenuViewModel.cs" />
+    <Compile Include="ViewModel\IManageLocationsViewModel.cs" />
     <Compile Include="ViewModel\LocateMeViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\ManageLocationsViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="View\LocateMeUC.xaml.cs">
       <DependentUpon>LocateMeUC.xaml</DependentUpon>
@@ -169,7 +170,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

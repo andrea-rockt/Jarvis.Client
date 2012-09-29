@@ -10,7 +10,7 @@
         Providers:ResxLocalizationProvider.DefaultAssembly="Jarvis.Client"
         Providers:ResxLocalizationProvider.DefaultDictionary="Localization.MainWindow"   
         x:Class="Jarvis.Client.View.MainWindow" x:Name="JarvisMainWindow" Background="{DynamicResource WindowBackgroundBrush}" Height="350" Width="525" Title="{lex:Loc}" xmlns:my="clr-namespace:Jarvis.Client"
-        xmlns:View="clr-namespace:Jarvis.Client.View" Loaded="JarvisMainWindow_Loaded">
+        xmlns:View="clr-namespace:Jarvis.Client.View" Loaded="JarvisMainWindow_Loaded" MinWidth="640" MinHeight="410">
 
 	<DockPanel DataContext="{Binding Source={StaticResource Locator}, Path=Main}">
 		<Menu  DockPanel.Dock="Top">
@@ -150,11 +150,11 @@
 						<Grid.RenderTransform>
 							<RotateTransform Angle="90"/>
 						</Grid.RenderTransform>
-						<Label HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="Manage Locations"/>
+						<Label HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="Manage Locations" Foreground="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type TabItem}}}"/>
 						<Image Source="/Icons/Globe.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20"/>
 					</Grid>
 				</TabItem.Header>
-                <View:ManageLocationsUC d:LayoutOverrides="Width"/>
+                <View:ManageLocationsUC DataContext="{Binding Source={StaticResource Locator}, Path=ManageLocations}" d:LayoutOverrides="Width"/>
 			</TabItem>
 			<TabItem>
 				<TabItem.Header>
@@ -162,8 +162,8 @@
 						<Grid.RenderTransform>
 							<RotateTransform Angle="90"/>
 						</Grid.RenderTransform>
-						<Label HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="Locate Me!"/>
-						<Image Source="\Icons\Pin.png"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="15"/>
+						<Label Foreground="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type TabItem}}}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="Locate Me!"/>
+						<Image Source="/Icons/Pin.png"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="15"/>
 					</Grid>
 				</TabItem.Header>
                 <View:LocateMeUC DataContext="{Binding LocateMe, Mode=OneWay}"/>
@@ -174,7 +174,7 @@
 						<Grid.RenderTransform>
 							<RotateTransform Angle="90"/>
 						</Grid.RenderTransform>
-						<Label HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="Statistics"/>
+						<Label Foreground="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type TabItem}}}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="Statistics"/>
 						<Image Source="/Icons/Chart.png"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="15"/>
 					</Grid>
 				</TabItem.Header>

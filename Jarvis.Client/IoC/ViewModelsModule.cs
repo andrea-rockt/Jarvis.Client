@@ -32,6 +32,7 @@ namespace Jarvis.Client.IoC
             {
                 Bind<LocateMeViewModel>().ToSelf().InSingletonScope();
                 Bind<MainViewModel>().ToSelf().InSingletonScope();
+                Bind<ManageLocationsViewModel>().ToSelf().InSingletonScope();
                 Bind<CultureMenuViewModel>().ToSelf();
                 Bind<CultureMenuViewModel.CultureMenuItem>().ToSelf();
             }

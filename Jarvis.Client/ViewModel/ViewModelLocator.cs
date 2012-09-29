@@ -63,6 +63,11 @@ namespace Jarvis.Client.ViewModel
             get { return ServiceLocator.Current.GetInstance<LocateMeViewModel>(); }
         }
         
+        public ManageLocationsViewModel ManageLocations
+        {
+            get { return ServiceLocator.Current.GetInstance<ManageLocationsViewModel>(); }
+        }
+
         public static void Cleanup()
         {
             ServiceLocator.Current.GetInstance<MainViewModel>();
