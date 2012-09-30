@@ -12,7 +12,7 @@
 	<Grid x:Name="LayoutRoot">
 		<Grid x:Name="grid" d:LayoutOverrides="Width">
 			<Grid.ColumnDefinitions>
-				<ColumnDefinition MaxWidth="300" Width="0.5*"/>
+				<ColumnDefinition MaxWidth="300" Width="0.3*"/>
 				<ColumnDefinition Width="0.5*"/>
 			</Grid.ColumnDefinitions>
 			<Border Background="{DynamicResource DisabledBackgroundBrush}" Padding="4" >
@@ -29,7 +29,7 @@
 					<ListBox SelectedItem="{Binding SelectedLocation}" x:Name="LocationListBox" ItemsSource="{Binding Locations}" d:LayoutOverrides="Height" Grid.Row="1" Margin="0,4">
 						<ListBox.ItemTemplate>
 							<DataTemplate>
-								<TextBlock Text="{Binding Name}"/>
+								<Label Content="{Binding Name}"/>
 							</DataTemplate>
 						</ListBox.ItemTemplate>
 					</ListBox>
@@ -41,7 +41,7 @@
 				</Grid>
 			</Border>
 			<GridSplitter Width="1" Background="{DynamicResource ControlBackgroundBrush}"/>
-			<ContentControl Grid.Column="1" d:DataContext="{d:DesignData /SampleData/LocationSampleData.xaml}" Content="{Binding SelectedItem, ElementName=LocationListBox}">
+			<ContentControl Grid.Column="1" IsEnabled="{Binding IsLocationSelected}" Content="{Binding SelectedItem, ElementName=LocationListBox}">
 				<ContentControl.ContentTemplate>
 					<DataTemplate>
 						<Border Padding="3">
@@ -60,51 +60,55 @@
                         				
 									</Grid.RowDefinitions>
 									<Grid.ColumnDefinitions>
-										<ColumnDefinition Width="Auto"/>           				
+										<ColumnDefinition Width="70"/>           				
 										<ColumnDefinition/>           				
 									</Grid.ColumnDefinitions>	
 									<Label x:Name="LocationNameLabel" Grid.Column="0" Grid.Row="0" Content="{WPFLocalizeExtension_Extensions:Loc}" VerticalAlignment="Center"/>
-									<TextBox Grid.Column="1" Margin="2" Text="{Binding Name}" VerticalContentAlignment="Center" />
+									<TextBox Grid.Column="1" Margin="0,2,2,2" Text="{Binding Name}" VerticalContentAlignment="Center" />
 									<Label x:Name="LocationCityLabel" Grid.Column="0" Grid.Row="1" Content="{WPFLocalizeExtension_Extensions:Loc}" VerticalAlignment="Center"/>
-									<TextBox Margin="2" Text="{Binding City}" Grid.Column="1" Grid.Row="1" VerticalContentAlignment="Center" />
+									<TextBox Margin="0,2,2,2" Text="{Binding City}" Grid.Column="1" Grid.Row="1" VerticalContentAlignment="Center" />
 									<Label x:Name="LocationStateLabel" Grid.Column="0" Grid.Row="2" Content="{WPFLocalizeExtension_Extensions:Loc}" VerticalAlignment="Center"/>
-									<TextBox Margin="2" Text="{Binding State}" Grid.Column="1" Grid.Row="2" VerticalContentAlignment="Center"/>
+									<TextBox Margin="0,2,2,2" Text="{Binding State}" Grid.Column="1" Grid.Row="2" VerticalContentAlignment="Center"/>
 									<Label x:Name="LocationAddressLabel" Grid.Column="0" Grid.Row="3" Content="{WPFLocalizeExtension_Extensions:Loc}" VerticalAlignment="Center"/>
-									<TextBox Margin="2" Text="{Binding StreetAddress}" Grid.Column="1" Grid.Row="3" VerticalContentAlignment="Center"/>
+									<TextBox Margin="0,2,2,2" Text="{Binding StreetAddress}" Grid.Column="1" Grid.Row="3" VerticalContentAlignment="Center"/>
 								</Grid>
 								<Grid Margin="0,2,0,0" x:Name="CategoriesGrid" Grid.Row="1" Height="Auto">
 									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width="70"/>
 										<ColumnDefinition/>
 										<ColumnDefinition Width="120"/>
 									</Grid.ColumnDefinitions>
-									<ListBox Grid.Column="0" ItemsSource="{Binding Categories}" VerticalAlignment="Stretch">
+									<ListBox Grid.Column="1" ItemsSource="{Binding Categories}" VerticalAlignment="Stretch">
 										<ListBox.ItemTemplate>
 											<DataTemplate>
 												<TextBlock Text="{Binding Name}"/>
 											</DataTemplate>
 										</ListBox.ItemTemplate>
 									</ListBox>
-									<StackPanel Grid.Column="1" Margin="3,0,4,0">
+									<StackPanel Grid.Column="2" Margin="3,0,4,0">
 										<Button Content="Add" Height="22" Margin="0,0,0,2"/>
 										<Button Content="Remove" Height="22"/>
 									</StackPanel>
+									<Label Content="Categories:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 								</Grid>
 								<Grid Margin="0,2,0,0" x:Name="ActionsGrid" Grid.Row="2">
 									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width="70"/>
 										<ColumnDefinition/>
 										<ColumnDefinition Width="120"/>
 									</Grid.ColumnDefinitions>
-									<ListBox Grid.Column="0" ItemsSource="{Binding Actions}" VerticalAlignment="Stretch">
+									<ListBox Grid.Column="1" ItemsSource="{Binding Actions}" VerticalAlignment="Stretch">
 										<ListBox.ItemTemplate>
 											<DataTemplate>
 												<TextBlock Text="{Binding Id}"/>
 											</DataTemplate>
 										</ListBox.ItemTemplate>
 									</ListBox>
-									<StackPanel Grid.Column="1" Margin="3,0,4,0">
+									<StackPanel Grid.Column="2" Margin="3,0,4,0">
 										<Button Content="Add" Height="22" Margin="0,0,0,2"/>
 										<Button Content="Remove" Height="22"/>
 									</StackPanel>
+									<Label Content="Actions:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 								</Grid>
 							</Grid>
 						</Border>

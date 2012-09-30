@@ -35,9 +35,11 @@ namespace Jarvis.Client.ViewModel
             set { _locations = value; }
         }
 
-        [NotifyOfChanges]
+        [NotifyOfChanges("IsLocationSelected")]
         public virtual Location SelectedLocation { get; set; }
 
+        [NotifyOfChanges]
+        public virtual bool IsLocationSelected{get { return SelectedLocation != null; }}
 
         #region Commands
 

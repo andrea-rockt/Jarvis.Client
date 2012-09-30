@@ -25,7 +25,8 @@ namespace Jarvis.Client.IoC
 
         public ChannelFactory<ILocationService> GetFactoryForLocationService(IContext context)
         {
-            return new ChannelFactory<ILocationService>(new BasicHttpBinding(), "http://localhost:9090/Jarvis");
+            return new ChannelFactory<ILocationService>(
+                new NetNamedPipeBinding("NetNamedPipeBinding_ILocationService"), "net.pipe://localhost/Jarvis/Location");
         } 
 
         public ILocationService GetProxyForLocationService(IContext context)

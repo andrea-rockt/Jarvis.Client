@@ -9,8 +9,8 @@
         Engine:LocalizeDictionary.DesignCulture="it"
         Providers:ResxLocalizationProvider.DefaultAssembly="Jarvis.Client"
         Providers:ResxLocalizationProvider.DefaultDictionary="Localization.MainWindow"   
-        x:Class="Jarvis.Client.View.MainWindow" x:Name="JarvisMainWindow" Background="{DynamicResource WindowBackgroundBrush}" Height="350" Width="525" Title="{lex:Loc}" xmlns:my="clr-namespace:Jarvis.Client"
-        xmlns:View="clr-namespace:Jarvis.Client.View" Loaded="JarvisMainWindow_Loaded" MinWidth="640" MinHeight="410">
+        x:Class="Jarvis.Client.View.MainWindow" x:Name="JarvisMainWindow" Background="{DynamicResource WindowBackgroundBrush}" Title="{lex:Loc}" xmlns:my="clr-namespace:Jarvis.Client"
+        xmlns:View="clr-namespace:Jarvis.Client.View" Loaded="JarvisMainWindow_Loaded" MinWidth="640" MinHeight="410" Width="640" Height="410" WindowStyle="ThreeDBorderWindow">
 
 	<DockPanel DataContext="{Binding Source={StaticResource Locator}, Path=Main}">
 		<Menu  DockPanel.Dock="Top">
