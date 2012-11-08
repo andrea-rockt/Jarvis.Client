@@ -1,6 +1,6 @@
 using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight.Command;
-using Jarvis.WCF.Contracts.Data;
+using Jarvis.Client.Model;
 using Ninject.Extensions.Interception.Attributes;
 
 namespace Jarvis.Client.ViewModel

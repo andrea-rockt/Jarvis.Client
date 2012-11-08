@@ -1,5 +1,8 @@
+using System;
 using System.Globalization;
 using System.Windows;
+using GalaSoft.MvvmLight.Messaging;
+using Jarvis.Client.Messages;
 
 namespace Jarvis.Client.View
 {
@@ -11,6 +14,7 @@ namespace Jarvis.Client.View
         public MainWindow()
         {
             InitializeComponent();
+            Messenger.Default.Register<AddCategoryDialogMessage>(this,ShowAddCategoryDialog);
         }
 
         private void JarvisMainWindow_Loaded(object sender, RoutedEventArgs e)
@@ -21,5 +25,14 @@ namespace Jarvis.Client.View
             WPFLocalizeExtension.Engine.LocalizeDictionary.Instance.Culture = culture;
 
         }
+
+        void ShowAddCategoryDialog(AddCategoryDialogMessage message)
+        {
+            AddCategoryDialog addCategoryDialog = new AddCategoryDialog();
+            addCategoryDialog.DataContext = message.Content;
+            addCategoryDialog.Owner = this;
+            addCategoryDialog.ShowDialog();
+        }
+
     }
 }

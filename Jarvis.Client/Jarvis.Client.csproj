@@ -39,6 +39,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.2.1.267\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="GalaSoft.MvvmLight.Extras.WPF4">
       <HintPath>..\packages\MvvmLight.4.1.23.0\lib\net40\GalaSoft.MvvmLight.Extras.WPF4.dll</HintPath>
     </Reference>
@@ -99,9 +102,18 @@
     </ApplicationDefinition>
     <Compile Include="Commands\ExitCommand.cs" />
     <Compile Include="Converters\SubtractingConverter.cs" />
+    <Compile Include="IoC\AutoMapperModule.cs" />
     <Compile Include="IoC\BingMapsModule.cs" />
     <Compile Include="IoC\LocationServiceModule.cs" />
     <Compile Include="IoC\ViewModelsModule.cs" />
+    <Compile Include="Messages\AddCategoryDialogMessage.cs" />
+    <Compile Include="Model\Action.cs" />
+    <Compile Include="Model\Entity{T}.cs" />
+    <Compile Include="Model\ExecuteProgramAction.cs" />
+    <Compile Include="Model\Location.cs" />
+    <Compile Include="Model\LocationCategory.cs" />
+    <Compile Include="Model\ShowMessageAction.cs" />
+    <Compile Include="Model\TerminateProgramAction.cs" />
     <Compile Include="ViewModel\AutoNotifyViewModelBase.cs" />
     <Compile Include="ViewModel\CultureMenuViewModel.cs" />
     <Compile Include="ViewModel\IManageLocationsViewModel.cs" />
@@ -109,6 +121,9 @@
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ManageLocationsViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="View\AddCategoryDialog.xaml.cs">
+      <DependentUpon>AddCategoryDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\LocateMeUC.xaml.cs">
       <DependentUpon>LocateMeUC.xaml</DependentUpon>
     </Compile>
@@ -128,6 +143,10 @@
       <DependentUpon>MainWindow.resx</DependentUpon>
     </Compile>
     <Page Include="Themes\ExpressionDark.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\AddCategoryDialog.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -185,9 +204,6 @@
     <Resource Include="Icons\Globe.png" />
     <Resource Include="Icons\Pin.png" />
     <Resource Include="MVVMLight.Nuget.Readme.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <DesignData Include="SampleData\LocationSampleData.xaml" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

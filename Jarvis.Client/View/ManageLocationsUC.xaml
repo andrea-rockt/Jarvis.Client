@@ -41,7 +41,7 @@
 				</Grid>
 			</Border>
 			<GridSplitter Width="1" Background="{DynamicResource ControlBackgroundBrush}"/>
-			<ContentControl Grid.Column="1" IsEnabled="{Binding IsLocationSelected}" Content="{Binding SelectedItem, ElementName=LocationListBox}">
+			<ContentControl Grid.Column="1" IsEnabled="{Binding IsLocationSelected}" Content="{Binding SelectedLocation}">
 				<ContentControl.ContentTemplate>
 					<DataTemplate>
 						<Border Padding="3">
@@ -78,16 +78,16 @@
 										<ColumnDefinition/>
 										<ColumnDefinition Width="120"/>
 									</Grid.ColumnDefinitions>
-									<ListBox Grid.Column="1" ItemsSource="{Binding Categories}" VerticalAlignment="Stretch">
+									<ListBox Grid.Column="1" ItemsSource="{Binding Categories}" VerticalAlignment="Stretch" SelectedItem="{Binding ManageLocations.SelectedCategory, Source={StaticResource Locator}}">
 										<ListBox.ItemTemplate>
 											<DataTemplate>
 												<TextBlock Text="{Binding Name}"/>
 											</DataTemplate>
 										</ListBox.ItemTemplate>
 									</ListBox>
-									<StackPanel Grid.Column="2" Margin="3,0,4,0">
-										<Button Content="Add" Height="22" Margin="0,0,0,2"/>
-										<Button Content="Remove" Height="22"/>
+									<StackPanel Grid.Column="2" Margin="3,0,4,0" DataContext="{Binding Source={StaticResource Locator}}">
+										<Button Content="Add" Height="22" Margin="0,0,0,2" Command="{Binding ManageLocations.AddCategory}"/>
+										<Button Content="Remove" Height="22" Command="{Binding ManageLocations.RemoveCategory}"/>
 									</StackPanel>
 									<Label Content="Categories:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 								</Grid>
@@ -97,16 +97,16 @@
 										<ColumnDefinition/>
 										<ColumnDefinition Width="120"/>
 									</Grid.ColumnDefinitions>
-									<ListBox Grid.Column="1" ItemsSource="{Binding Actions}" VerticalAlignment="Stretch">
+									<ListBox Grid.Column="1" ItemsSource="{Binding Actions}" VerticalAlignment="Stretch" SelectedItem="{Binding ManageLocations.SelectedAction, Source={StaticResource Locator}}">
 										<ListBox.ItemTemplate>
 											<DataTemplate>
 												<TextBlock Text="{Binding Id}"/>
 											</DataTemplate>
 										</ListBox.ItemTemplate>
 									</ListBox>
-									<StackPanel Grid.Column="2" Margin="3,0,4,0">
-										<Button Content="Add" Height="22" Margin="0,0,0,2"/>
-										<Button Content="Remove" Height="22"/>
+									<StackPanel Grid.Column="2" Margin="3,0,4,0" DataContext="{Binding Source={StaticResource Locator}}">
+										<Button Content="Add" Height="22" Margin="0,0,0,2" Command="{Binding ManageLocations.AddAction}"/>
+										<Button Content="Remove" Height="22" Command="{Binding ManageLocations.RemoveAction}"/>
 									</StackPanel>
 									<Label Content="Actions:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 								</Grid>

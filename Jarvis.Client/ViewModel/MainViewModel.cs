@@ -5,7 +5,6 @@ using System.Windows;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using Jarvis.Client.MvvmLight;
-using Jarvis.WCF.Contracts.Data;
 using Jarvis.WCF.Contracts.Service;
 using Microsoft.Practices.ServiceLocation;
 using Ninject.Extensions.Interception.Attributes;

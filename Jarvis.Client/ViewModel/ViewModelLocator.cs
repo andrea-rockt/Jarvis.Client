@@ -42,6 +42,7 @@ namespace Jarvis.Client.ViewModel
                                   new LocationServiceModule(),
                                   new ViewModelsModule(ViewModelBase.IsInDesignModeStatic),
                                   new BingMapsModule(), 
+                                  new AutoMapperModule(), 
                               };
 
             
